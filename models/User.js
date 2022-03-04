@@ -9,7 +9,7 @@ class User extends Model {
     return bcrypt.compareSync(loginPw, this.password);
   }
 }
-
+// model of a user that has an id that is an autoincremented integer with a primary key that cannot be empty, a username that is a string that cannot be left empty, and a password with at least 4 characters that is a string and cannot be left empty
 User.init(
   {
     id: {

@@ -1,7 +1,8 @@
 const router = require('express').Router();
-const { Post } = require('../models/');
+const { Post } = require('../models');
 const withAuth = require('../utils/auth');
 
+// get all, login protected
 router.get('/', withAuth, async (req, res) => {
   try {
     const postData = await Post.findAll({
@@ -20,13 +21,13 @@ router.get('/', withAuth, async (req, res) => {
     res.redirect('login');
   }
 });
-
+// get new posts, login protected
 router.get('/new', withAuth, (req, res) => {
   res.render('new-post', {
     layout: 'dashboard',
   });
 });
-
+// get id, login protected
 router.get('/edit/:id', withAuth, async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id);

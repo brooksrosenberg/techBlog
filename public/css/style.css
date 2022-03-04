@@ -1,3 +1,4 @@
+/* general css */
 :root {
   --primary: #e9ebec;
   --secondary: #bab0b1;
@@ -10,7 +11,7 @@
 * {
   box-sizing: border-box;
 }
-
+/* body styling */
 body {
   background-color: var(--primary);
   margin: 0;
@@ -41,6 +42,7 @@ h2 a {
   color: var(--primary);
 }
 
+/* header styling */
 header {
   margin-top: 50px;
 }
@@ -100,7 +102,7 @@ input {
 .li-inline {
   display: inline;
 }
-
+/* navbar styling */
 .navbar {
   width: 100%;
   position: fixed;
@@ -124,7 +126,7 @@ input {
 .hero p {
   max-width: 75%;
 }
-
+/* title style */
 .app-title {
   font-size: 3rem;
   background-color: var(--primary);
@@ -155,7 +157,7 @@ input {
 .list-item:hover {
   background-color: var(--dark);
 }
-
+/* footer styling */
 .footer a {
   display: inline-block;
   padding: 1em;
